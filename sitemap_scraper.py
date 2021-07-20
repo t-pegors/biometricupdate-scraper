@@ -76,7 +76,7 @@ class Scraper:
 
             database.update_sitemap_status(sitemap, status, table='sitemap_status')
 
-    def scrape_article_content(self, limit=10):
+    def scrape_article_content(self, limit=100):
 
         unpulled_df = database.list_unpulled_articles()
         unpulled_articles = unpulled_df['page_url']
